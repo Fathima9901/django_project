@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Student Registration Form </title>
+    <link rel="stylesheet" href="{% static '/css/student_register.css' %}">
+</head>
+
+<body>
+    <section class="registration-container">
+        <h2> Registration </h2>
+        <section class="details-section">
+            <form method="post" action="register" class="registration-form">
+                <!-- Personal Details Section -->
+                <h4> Personal Details </h4>
+                <section class="personal-details">
+                    <div class="three-details-item">
+                        <label for="fname">
+                            <p>First Name</p>
+                            <input type="text" name="first_name" id="fname" placeholder="Enter your first name" required>
+                        </label>
+
+                        <label for="mname">
+                            <p>Middle Name</p>
+                            <input type="text" name="middle_name" id="mname" placeholder="Enter your middle name" >
+                        </label>
+
+                        <label for="lname">
+                            <p>Last Name</p>
+                            <input type="text" name="last_name" id="lname" placeholder="Enter your last name" required>
+                        </label>
+                    </div>
+                    <div class="three-details-item">
+                        <label for="father">
+                            <p> Father Name </p>
+                            <input type="text" name="father_name" id="father" placeholder="Enter father name" required>
+                        </label>
+                        <label for="mother">
+                            <p>Mother Name</p>
+                            <input type="text" name="mother_name" id="mother" placeholder="Enter mother name" required>
+                        </label>
+                        <label for="password1">
+                            <p> Password </p>
+                            <input type="password" name="password" id="password1" placeholder="Create a Strong password.." required autocomplete="False">
+                        </label>
+                        <label for="password2">
+                            <p> Confirm Password </p>
+                            <input type="password" name="pass" id="password2" placeholder="Retype password.." required>
+                        </label>
+                    </div>
+
+                    <div class="three-details-item">
+                        <label for="birthday">
+                            <p>Date of Birth</p>
+                            <input type="date" name="date_of_birth" id="birthday" required>
+                        </label>
+                        <label for="ph">
+                            <p> Mobile Number</p>
+                            <input type="text" name="phone_number" id="ph" placeholder="Enter mobile number" required>
+                        </label>
+
+                        <label for="sex">
+                            <p> Gender</p>
+                            <input type="radio" name="gender" value="M" required>Male
+                            <input type="radio" name="gender" value="F" required>Female
+                        </label>
+                    </div>
+                    <div class="three-details-item">
+                         <label for="regno">
+                            <p>University Register Number</p>
+                            <input type="text" name="enrollment_no" id="regno" placeholder="Enter your roll no" required>
+                        </label>
+
+                        <label for="dept">
+                            <p> Branch </p>
+                            <select id="dept" name="branch" required>
+                                <option value=""> -- Choose your Branch --</option>
+                                <option value="BCA">BCA</option>
+                                <option value="BCA DS">BCA DS</option>
+                              </select>
+                        </label>
+
+                        <label for="email">
+                            <p>Personal Mail</p>
+                            <input type="email" name="mail_id" id="email" placeholder="Enter your mail id" required>
+                        </label>
+
+                        <label for="cmail2">
+                            <p> College Mail</p>
+                            <input type="email" name="college_mail" id="cmail2" placeholder="Enter your college mail" required>
+                        </label>
+                    </div>
+                    <div class="three-details-item">
+                        <label for="address">
+                            <p> Address Name </p>
+                            <input type="text" name="address_name" id="address" placeholder="Enter your address name" required>
+                        </label>
+
+                        <label for="PO">
+                            <p> Post Office </p>
+                            <input type="text" name="post_office" id="PO" placeholder="Enter your post office" required>
+                         </label>
+
+                         <label for="pincode">
+                            <p> Pincode </p>
+                            <input type="number" name="pincode" id="pincode" placeholder="Enter your pincode" required>
+                        </label>
+
+                        <label for="distr">
+                            <p> District </p>
+                            <select id="distr" name="district" required>
+                                <option value=""> -- Choose your District --</option>
+                                <option value="Thiruvananthapuram"> Thiruvananthapuram </option>
+                                <option value="Kollam"> Kollam </option>
+                                <option value="Pathanamthitta"> Pathanamthitta </option>
+                                <option value="Alappuzha"> Alappuzha </option>
+                                <option value="Kottayam"> Kottayam </option>
+                                <option value="Idukki"> Idukki </option>
+                                <option value="Eranakulam"> Eranakulam </option>
+                                <option value="Thrissur"> Thrissur </option>
+                                <option value="Palakkad"> Palakkad </option>
+                                <option value="Wayanad"> Wayanad </option>
+                                <option value="Kannur"> Kannur </option>
+                                <option value="Malappuram"> Malappuram </option>
+                                <option value="Kozhikkod"> Kozhikkod </option>
+                                <option value="Kasaragod"> Kasaragod</option>
+                            </select>
+                        </label>
+                        <label for="city_name">
+                            <p> City </p>
+                            <input type="text" name="city" id="city_name" placeholder="Enter your city" required>
+                        </label>
+                    </div>
+                    <div class="three-details-item">
+                        <label for="tenth">
+                            <p> Tenth Percentage </p>
+                            <input type="text" name="tenth" id="tenth" placeholder="Enter your tenth percentage" required>
+                        </label>
+                        <label for="tewlfth">
+                            <p> Tewlfth Percentage </p>
+                            <input type="text" name="twelfth" id="tewlfth" placeholder="Enter your tewlfth percentage" required>
+                        </label>
+                         <label for="cgpa">
+                            <p> Current CGPA </p>
+                            <input type="text" name="current_cgpa" id="cgpa" placeholder="Enter your current cgpa " required>
+                        </label>
+                    </div>
+                    <button type="submit" class="submit-btn"> Register </button>
+                </section>
+            </form>
+        </section>
+    </section>
+</body>
+
+</html>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    background-color: rgb(34, 232, 254);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration-container {
+    background: #fff;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.registration-container h2 {
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.registration-container h2::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 3px;
+    width: 20%;
+    border-radius: 2px;
+    background-color: #e65b00;
+}
+
+.three-details-item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+hr {
+    width: 70%;
+    height: 1px;
+    background-color: #d2d2d2;
+    margin: 1rem 0;
+    border: none;
+}
+
+.personal-details,
+.identity-details {
+    margin: .2rem 0;
+}
+
+.personal-details label,
+.identity-details label {
+    margin: .5rem 1rem;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.three-details-item input {
+    outline: none;
+    font-size: .8rem;
+    border-radius: .2rem;
+    border: 1px solid rgb(113, 101, 101);
+    padding: .1rem;
+    background-color: transparent;
+}
+
+.submit-btn {
+    border: none;
+    background-color: #e65b00;
+    color: white;
+    padding: .3rem 1rem;
+    display: block;
+    width: 50%;
+    margin: .6rem auto;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+}
+</style>
